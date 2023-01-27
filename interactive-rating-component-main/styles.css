@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+--Orange: hsl(25, 97%, 53%);
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+--font-Weight: 400;
+--font-Weight: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  Margin: 0;
+  font-family: 'overpass';
+
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--White);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+  display: grid;
+  place-content: center ;
+}
+
+.card{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--Dark-Blue);
+    width: 500px;
+    border-radius: 25px;
+    padding: 2.5rem 2.5rem;
+}
+
+.star{
+  width: 30px;
+  padding-bottom: 2rem;
+
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  
+}
+.info h1 {
+  font-size: 38px;
+  color: white;
+  padding-bottom: 1.5rem;
+}
+.info p{
+  font-size: 18px;
+  padding-bottom: 2rem;
+  color: var(--Light-Grey);
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2.4rem;
+  justify-content: center;
+  
+}
+.buttons > * {
+  width: 4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(124, 135, 152, 0.2);
+  color: var(--Light-Grey);
+  border: none;
+}
+
+.submit {
+  width: 425px;
+  color: var(--White);
+  background-color: var(--Orange);
+  padding: 1.3rem;
+  border-radius: 40px;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.submit:hover{
+  cursor: pointer;
+  background: var(--White);
+  color: var(--Orange);
+}
+
+.buttons >*:hover{
+  cursor: pointer;
+  background: var(--Orange);
+  color: white;
+
+}
+
+
+/* Thankyou card styles */
+
+.card2 {
+  background-color: var(--Dark-Blue);
+  padding: 2.5rem 2.5rem;
+  width: 500px;
+  border-radius: 25px;
+}
+
+.thankyou-img{
+  margin-inline: auto;
+  width: 250px;
+  padding-bottom: 2rem;
+
+}
+
+.message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Orange);
+  font-size: 18px;
+  background: rgb(124, 135, 152, 0.2);
+  display: flex;
+  margin-inline: auto;
+  width: 260px;
+  height: 50px;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+
+.thankyou-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thankyou-message h2{
+ color: var(--White);
+ font-size: 38px;
+ padding-bottom: 1rem;
+}
+
+.thankyou-message p {
+  font-size: 18px;
+  padding-inline: 2rem;
+  color: var(--Light-Grey);
+}
+
+ .section2{
+  display: none;
+} 
+
+.section2.display{
+  display: block;
+}
+
+.section1.hide {
+  display: none;
+}
